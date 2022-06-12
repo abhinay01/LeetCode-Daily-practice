@@ -25,9 +25,8 @@ class Solution {
         //     return false;
         
             // return true;
-        if(a.val==b.val)
+        if(a.val!=b.val)
+            return false;
         return isSameTree(a.left,b.left) && isSameTree(a.right,b.right);
-        else return false;
-        // return ;
     }
 }
