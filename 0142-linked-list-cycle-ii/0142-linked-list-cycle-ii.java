@@ -16,18 +16,15 @@ public class Solution {
     public ListNode hasCycle(ListNode head) {
         ListNode slow=head;
         ListNode fast=head;
-        int cycle=1;
         do{
             if(fast==null || fast.next==null)
             {
-                cycle=0;
-                break;
+                return null;
             }
             slow=slow.next;
             fast=fast.next.next;
         }while(slow!=fast);
-        if(cycle==0)
-            return null;
+            
         slow=head;
         while(slow!=fast)
         {
